@@ -1,27 +1,158 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-body {
-	margin: 0;
-	background: #fcfcfc;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+*:focus {
+    outline: none;
 }
 
-.container {
-	width: 80%;
-	margin: 0 auto;
+html, body {
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+    background: #09090a;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
 }
 
-header {
-  background: #45c1a4;
-  color: #fcfcfc
+a, a:visited {
+    text-decoration: none;
+    color: #227cff;
+    transition: color .5s ease;
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+a:hover {
+    text-decoration: underline;
+    color: #1c60c0;
 }
 
-.logo {
-  float: left;
+#center-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#center {
+    text-align: center;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.desc {
+    color: #afafaf;
+}
+
+.mini-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.gray {
+    color: #afafaf;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup .popup-text {
+    visibility: hidden;
+    max-width: 160px;
+    background-color: #0505058c;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 100%;
+    margin-left: -90px;
+}
+
+.popup .reveal {
+    visibility: visible;
+    animation: fade .5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .7;
+    }
+}
+
+.btn {
+    position: relative;
+    top: 0;
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    border-radius: 3px;
+    transition: background-color .3s ease, top .5s ease;
+}
+
+.btn:hover {
+    top: -2px;
+}
+
+.btn-blue {
+    background: #3154bd;
+}
+
+.btn-blue:hover {
+    background: #1f2a59;
+}
+
+.btn-green {
+    background: #20bd66;
+}
+
+.btn-green:hover {
+    background: #16592a;
+}
+
+.btn-pink {
+    background: #cf6a87;
+}
+
+.btn-pink:hover {
+    background: #c44569;
+}
+
+.btn-purple {
+    background: #8363f1;
+}
+
+.btn-purple:hover {
+    background: #3f3d8d;
+}
+
+.btn-red {
+    background: #bd3035;
+}
+
+.btn-red:hover {
+    background: #59191d;
+}
+
+.btn-dark {
+    background: #050506;
+}
+
+.btn-dark:hover {
+    background: #000000;
 }
